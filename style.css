@@ -1,0 +1,9 @@
+body {margin:0;color:white;font-family:Arial;text-align:center;}
+#bgVideo {position:fixed;width:100%;height:100%;object-fit:cover;z-index:-1;}
+.overlay {background:rgba(0,0,0,0.6);min-height:100vh;}
+#chat,#gallery,#meter,#proposal {display:none;margin-top:20px;}
+.msg {background:#222;margin:5px;padding:10px;border-radius:10px;}
+#slide {width:250px;border-radius:15px;}
+button {padding:10px;margin:5px;border:none;border-radius:10px;cursor:pointer;}
+.fire {position:absolute;width:6px;height:6px;background:yellow;border-radius:50%;animation:blast 1s;}
+@keyframes blast {to {transform:scale(10);opacity:0;}}

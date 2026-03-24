@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onclick="fireworks(event)">
+
+<video autoplay muted loop id="bgVideo">
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+<div id="intro">
+  <h1>Some people come into life… ❤️</h1>
+  <button onclick="start()">Enter My Heart</button>
+</div>
+
+<audio id="song" src="song1.mp3"></audio>
+<audio id="voice" src="voicenote1.mp3"></audio>
+
+<div id="chat"></div>
+
+<div id="gallery">
+  <img id="slide" src="ph1.jpg">
+</div>
+
+<div id="meter">
+  <h3>How much do you love me?</h3>
+  <input type="range" min="0" max="100" oninput="loveMeter(this.value)">
+  <p id="loveResult"></p>
+</div>
+
+<div id="countdown"></div>
+<p id="locationMsg"></p>
+
+<div id="proposal" style="display:none;">
+  <h2>Will you stay forever? 💍</h2>
+  <button onclick="yes()">Yes ❤️</button>
+  <button id="noBtn" onmouseover="moveNo()">No 😏</button>
+</div>
+
+<button onclick="secret()">🔐 Secret</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

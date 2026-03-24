@@ -1,0 +1,13 @@
+let messages=["Hey…","I wanted to tell you something…","Can you find another friend I just want to say if I ever block you don't be offended okay? I apologize because day by day you become another for me I know but I can't You are too good a person so don't tease me and don't worry about me, this feeling makes me weird, but I want to say that I'm afraid if this goes on I might fall in love with you, so just Block me, that's the best thing 🙏🏻😣","You mean a lot to me…"];
+let i=0;
+function start(){intro.style.display="none";chat.style.display="block";song.play();typeMsg();getLocation();countdown();}
+function typeMsg(){if(i<messages.length){let d=document.createElement("div");d.className="msg";chat.appendChild(d);let j=0,t=setInterval(()=>{d.innerHTML+=messages[i][j++];if(j>=messages[i].length){clearInterval(t);i++;setTimeout(typeMsg,1000);}},40);}else showGallery();}
+let imgs=["ph1.jpg","ph2.jpg","ph3.jpg","ph4.jpg","ph5.jpg"],x=0;
+function showGallery(){gallery.style.display="block";meter.style.display="block";proposal.style.display="block";voice.play();setInterval(()=>{x=(x+1)%imgs.length;slide.src=imgs[x];},2000);}
+function loveMeter(v){loveResult.innerText=v>90?"I knew it 😍":"Not enough 😒";}
+function fireworks(e){let f=document.createElement("div");f.className="fire";f.style.left=e.clientX+"px";f.style.top=e.clientY+"px";document.body.appendChild(f);setTimeout(()=>f.remove(),1000);}
+function moveNo(){noBtn.style.position="absolute";noBtn.style.left=Math.random()*300+"px";noBtn.style.top=Math.random()*300+"px";}
+function yes(){alert("You made me the happiest ❤️");}
+function secret(){let p=prompt("Password?");alert(p==="samira"?"You unlocked my heart ❤️":"Wrong password 😅");}
+function getLocation(){navigator.geolocation.getCurrentPosition(()=>{locationMsg.innerText="Distance doesn't matter ❤️";});}
+function countdown(){let f=new Date();f.setDate(f.getDate()+5);setInterval(()=>{let d=Math.floor((f-new Date())/1000/60/60/24);countdown.innerText="Next meet in "+d+" days 💖";},1000);}
